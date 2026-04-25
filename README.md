@@ -20,3 +20,10 @@ Contract deployed via Remix IDE
 - getTimeUntilNextCheckin(address): Cooldown info
 ### Explorer
 https://basescan.org/address/0x1894bdC12a5699b0be7f2B694472254245edC2f2
+
+## Example Usage
+
+1. Call `checkIn()`
+2. Earn XP
+3. Build streak
+4. Repeat daily
