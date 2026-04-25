@@ -24,4 +24,5 @@ if (block.timestamp <= user.lastCheckin + DAY + 1 hours) {
 } else {
     user.streak = 1;
 }
+uint256 reward = BASE_REWARD + (user.streak * STREAK_BONUS);
 }
