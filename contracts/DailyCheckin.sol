@@ -10,8 +10,13 @@ contract DailyCheckin {contract DailyCheckin {
     }
 
     mapping(address => User) public users;
-uint256 public constant BASE_REWARD = 10;
-uint256 public constant STREAK_BONUS = 5;
-uint256 public constant DAY = 1 days;
+    uint256 public constant BASE_REWARD = 10;
+    uint256 public constant STREAK_BONUS = 5;
+    uint256 public constant DAY = 1 days;
+    function checkIn() public {User storage user = users[msg.sender];
 
+require(
+    block.timestamp >= user.lastCheckin + DAY,
+    "Already checked in today"
+);
 }
