@@ -1,11 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract DailyCheckin {// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+contract DailyCheckin {contract DailyCheckin {
 
-contract DailyCheckin {
+    struct User {
+        uint256 lastCheckin;
+        uint256 streak;
+        uint256 totalXP;
+    }
 
-}
+    mapping(address => User) public users;
 
 }
