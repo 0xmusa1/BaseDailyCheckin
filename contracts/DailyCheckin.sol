@@ -19,4 +19,9 @@ require(
     block.timestamp >= user.lastCheckin + DAY,
     "Already checked in today"
 );
+if (block.timestamp <= user.lastCheckin + DAY + 1 hours) {
+    user.streak += 1;
+} else {
+    user.streak = 1;
+}
 }
