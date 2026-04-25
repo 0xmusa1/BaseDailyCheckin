@@ -13,6 +13,7 @@ contract DailyCheckin {contract DailyCheckin {
     uint256 public constant BASE_REWARD = 10;
     uint256 public constant STREAK_BONUS = 5;
     uint256 public constant DAY = 1 days;
+    event CheckedIn(address indexed user, uint256 reward, uint256 streak);
     function checkIn() public {User storage user = users[msg.sender];
 
 require(
@@ -25,4 +26,6 @@ if (block.timestamp <= user.lastCheckin + DAY + 1 hours) {
     user.streak = 1;
 }
 uint256 reward = BASE_REWARD + (user.streak * STREAK_BONUS);
+user.totalXP += reward;
+user.lastCheckin = block.timestamp;
 }
