@@ -18,3 +18,5 @@ Contract deployed via Remix IDE
 - checkIn(): Daily claim XP
 - getUser(address): View user stats
 - getTimeUntilNextCheckin(address): Cooldown info
+### Explorer
+https://basescan.org/address/0x1894bdC12a5699b0be7f2B694472254245edC2f2
