@@ -30,4 +30,7 @@ uint256 reward = BASE_REWARD + (user.streak * STREAK_BONUS);
 user.totalXP += reward;
 user.lastCheckin = block.timestamp;
 emit CheckedIn(msg.sender, reward, user.streak);
+function getUser(address _user) public view returns (User memory) {
+    return users[_user];
+}
 }
