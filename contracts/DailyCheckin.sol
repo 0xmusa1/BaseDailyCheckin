@@ -10,5 +10,8 @@ contract DailyCheckin {contract DailyCheckin {
     }
 
     mapping(address => User) public users;
+uint256 public constant BASE_REWARD = 10;
+uint256 public constant STREAK_BONUS = 5;
+uint256 public constant DAY = 1 days;
 
 }
